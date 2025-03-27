@@ -1,0 +1,13 @@
+<h2>Dashboard</h2>
+<a href="/upload">Upload Leads</a>
+<table border="1">
+<tr><th>Name</th><th>Phone</th><th>Status</th><th>Salesperson</th></tr>
+{% for lead in leads %}
+<tr>
+<td><a href="/lead/{{ lead.id }}">{{ lead.name }}</a></td>
+<td>{{ lead.phone }}</td>
+<td>{{ lead.status }}</td>
+<td>{{ lead.salesperson }}</td>
+</tr>
+{% endfor %}
+</table>
